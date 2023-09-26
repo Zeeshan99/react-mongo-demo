@@ -36,9 +36,7 @@ export const getStaticPaths = async () => {
             params: {
                 meetupId: meetup._id.toString()
             }
-        })),
-        revalidate: 1,
-
+        }))
         // [
         //     {
         //         params: {
@@ -76,7 +74,9 @@ export const getStaticProps = async (context) => {
                 address: selectedMeetup.address,
                 description: selectedMeetup.address,
             }
-        }
+        },
+        revalidate: 1,
+
     }
 }
 
